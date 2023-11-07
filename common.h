@@ -5,7 +5,7 @@
 #ifndef STUDY4MYSELF_COMMON_H
 #define STUDY4MYSELF_COMMON_H
 #include "include/Valid Anagram.h"
-
+#include "include/IntersectionOfTwoArrays.h"
 
 
 #endif //STUDY4MYSELF_COMMON_H

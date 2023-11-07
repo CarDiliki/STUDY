@@ -3,4 +3,4 @@ project(STUDY)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(STUDY main.cpp "include/Valid Anagram.h" common.h)
+add_executable(STUDY main.cpp "include/Valid Anagram.h" common.h include/IntersectionOfTwoArrays.h)
