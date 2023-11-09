@@ -42,7 +42,22 @@ void intersection_ot_two_arrays(){
     }
 }
 
-
+void two_sum(){
+    vector<int> nums_a;
+    string temp1;
+    int target;
+    cout << "please enter the first array , separated by ',' : ";
+    cin >> temp1;
+    cout << "please enter the target : ";
+    cin >> target;
+    stringstream nums1(temp1);
+    string a;
+    while (getline(nums1, a, ',')){
+        nums_a.push_back(stoi(a));
+        a.clear();
+    }
+    TwoSum(nums_a, target).twoSum();
+}
 
 
 
@@ -51,8 +66,8 @@ void intersection_ot_two_arrays(){
 int main() {
 
 //    valid_anagram();
-    intersection_ot_two_arrays();
-
+//    intersection_ot_two_arrays();
+    two_sum();
 
     return 0;
 }
