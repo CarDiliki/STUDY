@@ -16,9 +16,7 @@ void validAnagram(){
 
 //2023/11/8
 //349.Intersection Of Two Arrays
-//在限制了数值范围的情况下就不需要用set
 //when the range of value is limited, there is no need to use 'set'.
-//set占用空间比数组大，且速度更慢，set把数值映射到key上都要做hash计算的
 //'set' takes up more space than arrays and is slower
 //'set' has to do hash calculations when mapping values to key
 void intersectionOfTwoArrays(){

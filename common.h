@@ -17,6 +17,8 @@ void splitString(const Input& input, Output& output, const Delimiter& delimiter)
     stringstream ss(input);
     string item;
     while(getline(ss, item, delimiter)){
+        //istringstream can continuously extract different types from strings
+        // converter >> (int)a >> (double)b >> (string)c ...
         istringstream converter(item);
         //template function define the container type value like this
         typename Output::value_type value;
