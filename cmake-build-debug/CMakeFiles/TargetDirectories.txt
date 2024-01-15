@@ -1,3 +1,0 @@
-E:/Linux/study4myself/STUDY/cmake-build-debug/CMakeFiles/STUDY.dir
-E:/Linux/study4myself/STUDY/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/Linux/study4myself/STUDY/cmake-build-debug/CMakeFiles/rebuild_cache.dir
