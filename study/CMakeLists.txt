@@ -8,3 +8,5 @@ include_directories(include/ include/common/)
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
 
 add_executable(STUDY ${SRC_FILES})
+
+target_link_libraries(STUDY -pthread)
