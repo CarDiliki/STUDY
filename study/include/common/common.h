@@ -5,9 +5,9 @@
 #ifndef STUDY4MYSELF_COMMON_H
 #define STUDY4MYSELF_COMMON_H
 #include <sstream>
-#include "include/Valid Anagram.h"
-#include "include/IntersectionOfTwoArrays.h"
-#include "include/TwoSum.h"
+#include "Valid Anagram.h"
+#include "IntersectionOfTwoArrays.h"
+#include "TwoSum.h"
 
 
 
