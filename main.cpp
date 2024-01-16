@@ -1,63 +1,29 @@
-#include "common.h"
+#include <iostream>
+#include <vector>
+#include <chrono>
 
+#include "include/ThreadPool.h"
 
-//2023/11/8
-//242.Valid anagram
-//use your brain, don't just think of violent solutions!!!!!
-void validAnagram(){
-    string word_a, word_b;
-    cout << "please enter the first string : ";
-    cin >> word_a;
-    cout << "please enter the second string : ";
-    cin >> word_b;
-    ValidAnagram(word_a, word_b).isValidAnagram();
-}
+int main()
+{
 
+    ThreadPool pool(4);
+    std::vector< std::future<int> > results;
 
-//2023/11/8
-//349.Intersection Of Two Arrays
-//when the range of value is limited, there is no need to use 'set'.
-//'set' takes up more space than arrays and is slower
-//'set' has to do hash calculations when mapping values to key
-void intersectionOfTwoArrays(){
-    vector<int> nums_a, nums_b, result;
-    string temp1, temp2;
-    cout << "please enter the first array , separated by ',' : ";
-    cin >> temp1;
-    cout << "please enter the second array , separated by ',' : ";
-    cin >> temp2;
-    splitString(temp1, nums_a, ',');
-    splitString(temp2, nums_b, ',');
-    result = IntersectionOfTwoArrays(nums_a, nums_b).intersection();
-    for(auto &it : result){
-        cout << it << " ";
+    for(int i = 0; i < 8; ++i) {
+        results.emplace_back(
+                pool.enqueue([i] {
+                    std::cout << "hello " << i << std::endl;
+                    std::this_thread::sleep_for(std::chrono::seconds(1));
+                    std::cout << "world " << i << std::endl;
+                    return i*i;
+                })
+        );
     }
-}
 
-//2023/11/9
-//1.Two Sum
-void twoSum(){
-    vector<int> nums_a;
-    string temp1;
-    int target;
-    cout << "please enter the first array , separated by ',' : ";
-    cin >> temp1;
-    cout << "please enter the target : ";
-    cin >> target;
-    splitString(temp1, nums_a, ',');
-    TwoSum(nums_a, target).twoSum();
-}
-
-
-
-
-
-int main() {
-
-//    validAnagram();
-//    intersectionOfTwoArrays();
-//    twoSum();
-
+    for(auto && result: results)
+        std::cout << result.get() << ' ';
+    std::cout << std::endl;
 
     return 0;
 }
