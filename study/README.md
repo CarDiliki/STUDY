@@ -1,2 +1,6 @@
 # STUDY
-This is a test for push
+mkdir build 
+cd build
+cmake ..
+make
+./STUDY
