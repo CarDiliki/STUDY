@@ -1,1 +1,0 @@
-# Pandas in 10 minutes
